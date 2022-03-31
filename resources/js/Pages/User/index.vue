@@ -255,10 +255,10 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { Head, Link } from "@inertiajs/inertia-vue3";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "/users", current: true },
+  { name: "Create", href: "users/create", current: false },
+  // { name: "Projects", href: "#", current: false },
+  // { name: "Calendar", href: "#", current: false },
 ];
 
 export default {

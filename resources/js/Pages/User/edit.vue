@@ -197,40 +197,40 @@
   <form id="contact" @submit.prevent="submit">
     <h3>User Form</h3>
     <fieldset>
-      <input placeholder="Your First name" type="text" tabindex="1" v-model="form.first_name" required autofocus>
+      <input placeholder="Your First name" type="text"  v-model="form.first_name" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Last name" type="text" tabindex="1" v-model="form.last_name" required autofocus>
+      <input placeholder="Your Last name" type="text"  v-model="form.last_name" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Date of Birth" type="text" tabindex="1" v-model="form.date_of_birth" required autofocus>
+      <input placeholder="Your Date of Birth" type="date" style="width: 100%" v-model="form.date_of_birth" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your age" type="text" tabindex="1" v-model="form.age" required autofocus>
+      <input placeholder="Your age" type="text"  v-model="form.age" required autofocus>
     </fieldset>
      <fieldset>
       <input placeholder="Your Email Address" type="email" v-model="form.email" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" v-model="form.home_phone" required autofocus>
+      <input placeholder="Your Home No" type="text"  v-model="form.home_phone" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Mobile No" type="text" tabindex="1" v-model="form.mobile_phone" required autofocus>
+      <input placeholder="Your Mobile No" type="text"  v-model="form.mobile_phone" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Home No" type="text" tabindex="1" v-model="form.street_address" required autofocus>
+      <input placeholder="Your street address" type="text"  v-model="form.street_address" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your City" type="text" tabindex="1" v-model="form.city" required autofocus>
+      <input placeholder="Your City" type="text"  v-model="form.city" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your State" type="text" tabindex="1" v-model="form.state" required autofocus>
+      <input placeholder="Your State" type="text"  v-model="form.state" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your ZipCode" type="text" tabindex="1" v-model="form.zip_code" required autofocus>
+      <input placeholder="Your ZipCode" type="text"  v-model="form.zip_code" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Current Time" type="text" tabindex="1" v-model="form.current_time" required autofocus>
+      <input placeholder="Your Current Time" type="time" style="width: 100%" v-model="form.current_time" required autofocus>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
@@ -253,10 +253,10 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { Head, Link } from "@inertiajs/inertia-vue3";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "/users", current: false },
+  // { name: "Create", href: "users/create", current: true },
+  // { name: "Projects", href: "#", current: false },
+  // { name: "Calendar", href: "#", current: false },
 ];
 
 export default {
@@ -326,7 +326,6 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #4CAF50;
 }
 
 .container {

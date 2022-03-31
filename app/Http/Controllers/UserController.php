@@ -41,7 +41,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $data = $request->all();
+        User::create($data);
         return Redirect::route('users.index');
     }
 
@@ -81,7 +82,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
+        $data = $request->all();
+        $user = User::find($id);
+        $user->update($data);
+
         return Redirect::route('users.index');
     }
 
