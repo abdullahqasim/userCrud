@@ -44,7 +44,7 @@
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
-              <a
+              <Link
                 v-for="item in navigation"
                 :key="item.name"
                 :href="item.href"
@@ -55,7 +55,7 @@
                   'px-3 py-2 rounded-md text-sm font-medium',
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
-                >{{ item.name }}</a
+                >{{ item.name }}</Link
               >
             </div>
           </div>
